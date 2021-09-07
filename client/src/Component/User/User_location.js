@@ -147,11 +147,15 @@ export default class User_location extends Component {
           user_zip_code: this.state.zip_code,
           address_line2: this.state.address_line_2,
         };
-        let user_location = await axios.post('/ca/v1/addUsers', userData1, {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
+        let user_location = await axios.post(
+          '/api/wp-json/ca/v1/addUsers',
+          userData1,
+          {
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          }
+        );
 
         this.setState({
           changeoption: true,

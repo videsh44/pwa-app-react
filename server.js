@@ -1,5 +1,5 @@
 const express = require('express');
-// const { createProxyMiddleware } = require('http-proxy-middleware');
+
 var cors = require('cors');
 const request = require('request');
 var bodyParser = require('body-parser');
@@ -22,9 +22,7 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
 
-// app.use('/api', createProxyMiddleware({ target: 'https://theminoritypsychologynetwork.org', changeOrigin: true }));
 app.post('/api/wp-json/ca/v1/addUsers', (req, res) => {
-  console.log(req.body);
   request.post(
     {
       headers: { 'content-type': 'application/json' },
@@ -43,4 +41,4 @@ app.post('/api/wp-json/ca/v1/addUsers', (req, res) => {
 
 const port = process.env.PORT || 8000;
 
-app.listen(port, () => console.log(`app running on 4000`));
+app.listen(port);

@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.e.mpnsecond",
+    "sha256_cert_fingerprints":
+    ["E0:11:05:51:FF:BC:18:80:9D:33:B0:D6:B6:D3:AE:93:7A:93:B5:ED:DC:18:7C:3B:0D:A1:21:E7:73:0E:44:1E"]
+  }
+}]

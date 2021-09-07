@@ -1,0 +1,276 @@
+.main-container {
+    background: $white;
+    min-height: 100vh;
+    display: flex; 
+    .container-fluid {
+        &.center-block {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .content {
+            padding: 40px 30px;
+            width: 100%;
+            text-align: $center;
+            @include breakpoint(xxs){
+                padding:20px 0;           
+            }
+            .logo {
+                img {
+                    max-width: 100%;
+                    @include breakpoint(xxs){
+                     max-width: 160px;   
+                    }
+                }
+            }
+            .login-heading {
+                text-align: $center;
+                color: #4c4c4c;
+                font-size: 34px;
+                font-weight: 400;
+                margin: 80px 0 40px 0;
+                @include breakpoint(xxs){
+                 margin: 40px 0 20px 0;     
+                 font-size: 24px;  
+                }
+            }
+            .welcome {
+                text-align: left;
+                color: #4c4c4c;
+                font-size: 24px;
+                font-weight:300;
+                margin:80px 0 40px 0;
+                @include breakpoint(xxs){
+                 margin:40px 0 20px 0;
+                 font-size: $fontLarge;
+                }
+                strong {
+                    display: block;
+                    color: #4c4c4c;
+                    font-size: 34px;
+                    font-weight: 600;
+                    line-height: normal;
+                    @include breakpoint(xxs){
+                     font-size: 18px;   
+                    }
+                }
+                p{
+                    @include breakpoint(xxs){
+                        margin: 0 0 10px 0;
+                    }
+                }
+            }
+            .form-block {
+                .forgot-link {
+                    text-align: $right;
+                    margin-bottom: 20px;
+                    @include breakpoint(xxs){
+                     margin-bottom: 10px;   
+                    }
+                    a {
+                        color: #4c4c4c;
+                        font-size: 18px;
+                        @include breakpoint(xxs){
+                            font-size: $fontLarge;
+                        }
+                        &:hover {
+                            color:#DAA520;
+                        }
+                    }
+                }
+            }
+            &.login {
+                @include breakpoint(xxs){
+                    padding: 20px 0 10px 0;
+                }
+                .dont-have-account {
+                    text-align: $center;
+                    margin-top:30px;
+                    color: #4b4b4b;
+                    font-size: 22px;
+                    font-family: 'Open Sans', sans-serif!important;
+                    @include breakpoint(xxs){
+                     font-size: $fontLarge;   
+                    }
+                    a {
+                        color:#DAA520;
+                        font-weight: 500;
+                    }
+                }
+            }
+            &.login-con {
+                width: 80%;
+                margin:0 auto;
+                @include breakpoint(xxs){
+                    width: 100%;
+                }
+                
+                .or {
+                    margin:30px 0;
+                    font-size: 22px;
+                    font-family: 'Open Sans', sans-serif!important;
+                    @include breakpoint(xxs){
+                     margin: 15px 0;   
+                    }
+                }
+                .dont-have-account {
+                    margin-top:40px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: #4b4b4b;
+                    font-size: 22px;
+                    font-family: 'Open Sans', sans-serif!important;
+                    @include breakpoint(xxs){
+                     font-size: $fontLarge;
+                     margin-top:20px;  
+                    }
+                    a {
+                        color:#DAA520;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+
+    //for member 
+    &.mid-con {
+        position: relative;
+        display: block;
+        min-height: inherit;
+        height: calc(100vh - 74px);
+        overflow: auto;
+        padding-bottom: 100px;
+        @include breakpoint(xxs){
+            padding-bottom: 60px;
+            height: calc(100vh - 60px);
+        }
+    }
+}
+
+
+.login-signup-header {
+    background: $default;
+    .links {
+        padding: 0 30px;
+        height: 74px;
+        @include flexBox();
+        @include breakpoint(xxs){
+            padding: 0;
+            height:60px;
+        }
+        a{
+            color:$white;
+            font-size: 24px;
+            line-height: 24px;
+            @include breakpoint(xxs){
+                font-size: $fontLarge;
+            }
+            .angle-left {
+                width: 10px;
+                height: 16px;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 15px;
+                background: url('../assets/images/left-arrow.png') no-repeat center left;
+                @include breakpoint(xxs){
+                    margin-right: 10px;
+                    margin-top:-2px;
+                }
+            }
+        }
+    }
+}
+.bottom-footer {
+    position: fixed;
+    bottom: 0;
+    left:0;
+    padding-top: 20px;
+    background: $white;
+    width: 100%;
+    height: 100px;
+    border-top:solid 1px #dfe3e9;
+    z-index: 99;
+    @include breakpoint(xxs){
+        height:60px;
+        padding-top:10px;
+    }
+    .button-block {
+        padding:0 30px;
+        display: flex;
+        justify-content: space-around;
+        margin: 0 -2%;
+        .btn {
+            margin: 0 2%;
+            @include breakpoint(xxs){
+                line-height: 38px!important;
+            }
+        }
+        @include breakpoint(xxs){
+            padding: 0;
+        }
+    }
+}
+
+.checkbox {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    .checkbox-la
+     {
+        margin-right: 10px;
+    }
+}
+
+.radio-block {
+    text-align: left;
+    ul {
+        li{
+            position: relative;
+            padding-left: 30px;
+            .checkbox-label {
+                position: absolute;
+                left:0;
+                top:4px;
+                .checkbox-custom {
+                    border-color: $default;
+                    @include border-radius(100%);
+                }
+                input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    &:checked ~ .checkbox-custom {
+                        background:$white;
+                        @include border-radius(100%);
+                        border:1px solid $default;
+                        transform: rotate(0deg) scale(1);
+                        opacity: 1;
+                        &:after {
+                            transform: none;
+                            opacity: 1;
+                            left: 3px;
+                            top: 3px;
+                            width: 10px;
+                            height: 10px;
+                            border-width: 0;
+                            background: #DAA520;
+                            @include border-radius(100%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.logo {
+    img {
+        max-width: 100%;
+        @include breakpoint(xxs){
+         max-width: 160px;   
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.header {
+    padding: 0 20px;
+    background: $default;
+    @include breakpoint(xxs){
+        padding: 0;
+    }
+    .container-fluid {
+        .inner-con {
+            position: relative;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: $center;
+            @include breakpoint(xxs){
+                height: 60px;
+            }
+            
+        }
+    }
+}
+

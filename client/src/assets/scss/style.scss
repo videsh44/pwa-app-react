@@ -1,0 +1,28 @@
+@import "custom-scss/resetcss";
+
+// Import animate scss
+@import "plugin-scss/animate.scss";
+
+// Import Select2 scss
+@import "plugin-scss/select2.scss";
+
+
+//Import custom varialbles
+@import "custom-scss/custom-variable";
+
+// Import custom-mixing scss
+@import "custom-scss/custom-mixing";
+
+// Import common scss
+@import "custom-scss/common";
+// Import popup css
+@import "custom-scss/popup"; 
+
+
+//Import "scss"
+@import "custom-scss/login"; 
+@import "custom-scss/header";
+@import "custom-scss/home";
+@import "custom-scss/profile";
+@import "custom-scss/search-doctor";
+@import "custom-scss/side-menu";  

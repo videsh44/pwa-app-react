@@ -1,0 +1,169 @@
+.outerLay {
+    display: none;
+    width:100%;
+    top:0;
+    left:0;
+    bottom: 0;
+    position: fixed;
+    background: rgba(0,0,0,0.6);
+    z-index: 1;
+    &.open {
+        display: block;
+    }
+}
+
+.sidemenu {
+    left:-100%;
+    bottom: 0;
+    top:0;
+    position: fixed;
+    background: $white;
+    max-width: 420px;
+    width:100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 8px 0 8px #332d2d73;
+    @include breakpoint(xxs){
+        max-width: 300px;
+    }
+    &.open {
+        left:0;
+    }
+    .profile-header {
+        padding: 15px;
+        border-bottom: solid 4px #d5d5d5;
+        background: $default;
+        // background: url(../assets/images/side-menu-bg.jpg) no-repeat;
+        // background-size: cover; 
+        a {
+            display: block;
+            figure {
+                display: inline-block;
+                min-width: 50px;
+                margin:0 0 10px 0;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                overflow:hidden;
+                text-align: center;
+                border-radius: 100%;
+                border:solid 1px #d5d5d5;
+                img {
+                    display: inline-block;
+                    vertical-align: middle;
+                    max-width: 50px;
+                    width: 50px;
+                }
+            }
+            figcaption {
+                position: relative;
+                color: $white;
+                font-size: 24px;
+                padding-right:20px;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right:0;
+                    transform: translateY(-50%);
+                    width:0;
+                    height: 0;
+                    border-top:solid 6px $white;
+                    border-left: solid 6px transparent;
+                    border-right: solid 6px transparent;
+                }
+                @include breakpoint(xxs){
+                    font-size: $fontLarge;
+                }
+                strong {
+                    display:block;
+                    font-weight: $normal;
+                }
+                span{
+                    display: block;
+                    font-weight: $light;
+                    font-size: 18px;
+                    @include breakpoint(xxs){
+                        font-size: $fontSmall;
+                    }
+                }
+            }
+        }
+    }
+    .menu {
+        height: calc(100vh - 141px);
+        overflow-y: auto;
+        ul {
+            li {
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    bottom: 1px;
+                    width: 2px;
+                    background: $default;
+                }
+                a {
+                    display: block;
+                    position: relative;
+                    color: $black;
+                    font-size: 18px;
+                    padding: 15px 15px 15px 65px;
+                    @include breakpoint(xxs){
+                        font-size: $fontLarge;
+                    }
+                    i.icon {
+                        width: 32px;
+                        top:50%;
+                        left:15px;
+                        position: absolute;
+                        background-image: url(../assets/images/menu-sprite.png);
+                        background-repeat: no-repeat;
+                        transform: translateY(-50%);
+                        &.about-icon {
+                            height:29px;
+                            background-position:0 0;
+                        }
+                        &.events-icon {
+                            height:26px;
+                            background-position:0 -40px;
+                        }
+                        &.mobile-mental-health-icon {
+                            height:28px; 
+                            background-position:0 -328px;
+                        }
+                        &.mental-health-icon {
+                            height:25px;
+                            background-position:0 -251px;
+                        }
+                        &.contact-icon {
+                            height:27px;
+                            background-position:0 -79px;
+                        }
+                        &.rate-icon {
+                            height:25px;
+                            background-position:0 -119px;
+                        }
+                        &.rating-icon {
+                            height:33px;
+                            background-position:2px -157px; 
+                        }
+                        &.logout-icon {
+                            height:26px;
+                            background-position:4px -206px;
+                        }
+                        &.profile-icon {
+                            height:26px;
+                            background-position:4px -292px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

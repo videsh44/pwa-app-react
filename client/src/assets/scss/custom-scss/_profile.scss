@@ -1,0 +1,185 @@
+.gender-block {
+    text-align: left;
+    margin-bottom: 20px;
+    ul {
+        display: flex;
+        align-items: center;
+        li {
+            margin-right: 30px;
+            font-size: 18px;
+            @include breakpoint(xxs){
+                font-size: $fontMedium;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+
+            .checkbox-label {
+                input {
+                    &:checked ~ .checkbox-custom {
+                        background:$default;
+                        @include border-radius(100%);
+                        border:1px solid $default;
+                        transform: rotate(0deg) scale(1);
+                        opacity: 1;
+                        &:after {
+                            transform: rotate(45deg) scale(1);
+                            background: #ddd;
+                            opacity: 1;
+                            left: 3px;
+                            top: 3px;
+                            width: 10px;
+                            height: 10px;
+                            border: solid #fff;
+                            border-width: 2px;
+                            @include border-radius(100%);
+                            z-index: 99;
+                        }
+                    }
+                }
+                .checkbox-custom {
+                    position: absolute;
+                    top: -1px;
+                    left: 0;
+                    width: 18px;
+                    height: 18px;
+                    background-color: transparent;
+                    border-radius: 100%; 
+                    border:solid 1px #cdcdcd;
+                    &:after {
+                        position:absolute;
+                        content: '';
+                        left: 10px;
+                        top: 10px;
+                        height: 0;
+                        width: 0;
+                        border-radius: 5px;
+                        border:solid #111;
+                        border-width: 0 1px 1px 0;
+                        transform: rotate(0deg) scale(0);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.upload-photo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    figure {
+        text-align: center;
+        overflow: hidden;
+        margin: 0 20px 0 0;
+        @include breakpoint(xxs){
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            margin:0 10px 0 0;
+        }
+        img {
+            width: 120px;
+            height: 120px;
+            border:solid 1px #ddd;
+            display: inline-block;
+            vertical-align: middle;
+            @include border-radius(100%);
+            @include breakpoint(xxs){
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+    .upload-btn {
+        position: relative;
+        width:auto;
+        overflow:hidden;
+        font-size: 18px!important;
+        padding:0 30px!important;
+        @include border-radius(4px);
+        @include breakpoint(xxs){
+            font-size: 14px!important;
+            padding:0 15px!important;
+            line-height:38px!important;
+        }
+        input[type="file"] {
+            top:0;
+            left:0;
+            right:0;
+            bottom: 0;
+            opacity: 0;
+            position: absolute;
+        }
+    }
+}
+.email {
+    margin-top:20px;
+    a {
+        color: gray;
+        display: inline-block;
+        vertical-align: middle;
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            vertical-align:text-bottom;
+            margin-left: 20px;
+            @include breakpoint(xxs){
+                max-width: 20px;
+            }
+        }
+        &:hover {
+            color: $default;
+        }
+    }
+}
+
+.location {
+    i {
+        position: absolute;
+        top:16px;
+        right: 20px;
+        @include breakpoint(xxs){
+            top:10px;
+        }
+        img {
+            width: 30px;
+            display: inline-block;
+            vertical-align: middle;
+            @include breakpoint(xxs){
+                max-width: 20px;
+            }
+        }
+    }
+}
+.locationSel {
+    
+    i {
+        position: absolute;
+        top:16px;
+        left: 20px;
+        @include breakpoint(xxs){
+            top:12px;
+            left:10px;
+        }
+        img {
+            width: 30px;
+            @include breakpoint(xxs){
+                width:20px;
+            }
+        }
+    }
+}
+.profile {
+    h3 {
+        text-align: left;
+        font-size: 18px;
+        color: #333;
+        margin:0 0 20px 0;
+        @include breakpoint(xxs){
+            font-size: $fontLarge;
+            margin-bottom: 10px;
+        }
+    }
+}

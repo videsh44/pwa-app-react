@@ -1,0 +1,45 @@
+.custom-modal {
+    .modal-dialog {
+        max-width: 400px;
+        .modal-content {
+            .modal-header {
+                position: relative;
+                border:none;
+                .modal-title {
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+                .close {
+                    position: absolute;
+                    top:20px;
+                    right:20px;
+                    z-index: 99;
+                    font-weight: bold;
+                    font-size: 18px;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &.congratsModal {
+        .modal-body {
+            padding: 60px 35px;
+            text-align: $center;
+            figure {
+                margin-bottom: 20px;
+                img {
+                    display: inline-block;
+                }
+            }
+            .congrats-text {
+                font-size: 20px;
+                margin-bottom: 60px;
+                strong {
+                    display: block;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+    
+}
